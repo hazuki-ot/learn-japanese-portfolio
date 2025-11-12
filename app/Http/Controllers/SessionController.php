@@ -10,9 +10,11 @@ class SessionController extends Controller
     {
         // フォームから送信された'language'の値を取得
         $language = $request->input('language');
+        $name     = $request->input('name');
 
         // セッションに'user_language'というキーで言語を保存
         session(['user_language' => $language]);
+        session(['user_name' => $name]);
 
         // 任意のページにリダイレクト
         return redirect()->route('starting');

@@ -12,13 +12,18 @@
 
                 <label for="language" class="form-label fw-bold">Choose Your Language</label>
 
-                <div class="mt-2">
+                <div class="mt-1">
                     <select class="form-select" name="language" id="language">
                         <option selected>Choose your language</option>
                             @foreach ($languages as $language)
                                 <option value="{{ $language->id }}">{{ $language->language }}</option>
                             @endforeach
                     </select>
+                </div>
+
+                <div class="mt-3">
+                    <lavel for="name" class="form-label fw-bold">start with your name</lavel>
+                    <input type="text" class="form-control mt-1" name="name" id="name" placeholder="enter your name">
                 </div>
 
                 <div class="input-group mt-3 ms-auto">

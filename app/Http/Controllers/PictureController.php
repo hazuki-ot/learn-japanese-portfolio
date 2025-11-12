@@ -33,13 +33,13 @@ class PictureController extends Controller
             'image'    => 'required|mimes:jpeg,jpg,png,gif|max:1048',
             'name'     => 'required|unique:pictures,name|max:20',
             'category' => 'required',
-            'sound'    => 'required|file|mimes:mp3,wav,ogg|max:20480', 
+            // 'sound'    => 'required|file|mimes:mp3,wav,ogg|max:20480', 
         ]);
 
         $this->picture->image       = $this->saveImage($request->image);
                                             //image name of $request->image
         $this->picture->name        = $request->name;
-        $this->picture->sound       = 'data:audio/' . $request->sound->extension() . ';base64,' . base64_encode(file_get_contents($request->sound));
+        // $this->picture->sound       = 'data:audio/' . $request->sound->extension() . ';base64,' . base64_encode(file_get_contents($request->sound));
        
         $this->picture->category_id = $request->category;
 

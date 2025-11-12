@@ -20,11 +20,11 @@
                     <label for="name" class="form-label fw-bold mt-3">Image About</label>
                     <input type="text" name="name" id="name" class="form-control" placeholder="image name here"> 
 
-                    <label for="sound" class="form-label fw-bold mt-3">Add Sound （Japanese）</label>
+                    {{-- <label for="sound" class="form-label fw-bold mt-3">Add Sound （Japanese）</label>
                     <input type="file" name="sound" id="sound" accept="audio/*" class="form-control" aria-describedby="sound-info">
                     <div id="sound-info" class="form-text">
                         Max file size is 20MB.
-                    </div> 
+                    </div>  --}}
 
                     <div class="mt-2">
                         <label for="category" class="form-label fw-bold mt-3">Category</label>
@@ -44,9 +44,9 @@
                         <div class="text-danger small">{{ $message }}</div>    
                     @enderror
 
-                    @error('sound')
+                    {{-- @error('sound')
                         <div class="text-danger small">{{ $message }}</div>    
-                    @enderror
+                    @enderror --}}
 
                     @error('category')
                         <div class="text-danger small">{{ $message }}</div>    

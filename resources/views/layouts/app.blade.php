@@ -59,7 +59,7 @@
                         <li class="nav-item">
                             <form action="{{ route('end.session') }}" method="POST">
                                 @csrf
-                                <button type="submit" class="btn"><i class="fa-solid fa-skull-crossbones" style="color: #eb3b0f;"></i></button>
+                                <button type="submit" class="btn"><i class="fa-solid fa-right-from-bracket" style="color: #f22c2c;"></i> bye <strong>{{ session('user_name')}}</strong></button>
                             </form>
                         </li>
                         @endguest
@@ -112,7 +112,7 @@
 
 
         <main class="py-5">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row justify-content-center">
                     {{--below shows only admin page --}}
                     @if (request()->is('admin/*'))
